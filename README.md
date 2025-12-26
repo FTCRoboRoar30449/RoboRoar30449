@@ -1,73 +1,87 @@
-# Welcome to your Lovable project
+# RoboRoar 30449 Website
 
-## Project info
+Official website for RoboRoar 30449, a middle school all-girls FIRST Tech Challenge (FTC) robotics team.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## About RoboRoar 30449
 
-## How can I edit this code?
+RoboRoar 30449 is a middle school all-girls FIRST Tech Challenge robotics team founded in Summer 2025. We are dedicated to inspiring young women to become tomorrow's STEM leaders through innovation, teamwork, and confidence.
 
-There are several ways of editing your application.
+### Prerequisites
 
-**Use Lovable**
+- Node.js (v18 or higher)
+- npm or yarn
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd RoboRoar30449-website
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Tech Stack
 
-## What technologies are used for this project?
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: shadcn/ui (Radix UI primitives)
+- **Routing**: React Router v6
+- **State Management**: TanStack Query
+- **Form Handling**: React Hook Form with Zod validation
+- **Icons**: Lucide React
 
-This project is built with:
+## Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── pages/           # Route-based page components
+│   ├── Index.tsx    # Home page
+│   ├── About.tsx    # About page
+│   ├── Vision.tsx   # Vision & Values
+│   ├── Team.tsx     # Team members
+│   ├── Competitions.tsx
+│   ├── Sponsors.tsx
+│   ├── Join.tsx
+│   ├── Contact.tsx
+│   └── Outreach.tsx # (Hidden from navigation)
+├── components/      # Reusable components
+│   ├── Layout.tsx
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   └── ui/         # shadcn/ui components
+├── assets/         # Images and static files
+├── hooks/          # Custom React hooks
+└── lib/            # Utility functions
+```
 
-## How can I deploy this project?
+## Brand Colors
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- **Navy**: `hsl(220, 45%, 17%)` - Primary brand color
+- **Gold**: `hsl(47, 93%, 54%)` - Secondary/accent color
+- **Pink**: `hsl(345, 83%, 55%)` - Accent color
 
-## Can I connect a custom domain to my Lovable project?
+## Contact
 
-Yes, you can!
+**Email**: roboroar30449@gmail.com
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2025 RoboRoar 30449. All rights reserved.
