@@ -2,23 +2,32 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
-import { Heart, ArrowRight, Building } from "lucide-react";
+import { Heart, ArrowRight } from "lucide-react";
+import solotechLogo from "@/assets/sponsors/solotech.png";
+import appleLogo from "@/assets/sponsors/apple.webp";
+import jankstersLogo from "@/assets/sponsors/janksters.webp";
+import shadowOaksLogo from "@/assets/sponsors/ShadowOaks.png";
+import dekaLogo from "@/assets/sponsors/deka.png";
+import boschLogo from "@/assets/sponsors/bosch.png";
+import timkenLogo from "@/assets/sponsors/timken.png";
+import jabilLogo from "@/assets/sponsors/jabil.png";
 
 const Sponsors = () => {
   const sponsorTiers = [
-    { tier: "Platinum", amount: "$2,500+", perks: "Logo on robot, jerseys, all materials" },
-    { tier: "Gold", amount: "$1,000+", perks: "Logo on banners and website" },
-    { tier: "Silver", amount: "$500+", perks: "Recognition on website" },
-    { tier: "Bronze", amount: "$100+", perks: "Thank you on social media" },
+    { tier: "Gold", amount: "$3,000+", perks: "Logo on robot, jerseys, all materials" },
+    { tier: "Silver", amount: "$1,000+", perks: "Logo on banners and website" },
+    { tier: "Bronze", amount: "$250+", perks: "Recognition on website" },
   ];
 
   const currentSponsors = [
-    { name: "Sponsor Logo 1", tier: "Platinum" },
-    { name: "Sponsor Logo 2", tier: "Gold" },
-    { name: "Sponsor Logo 3", tier: "Gold" },
-    { name: "Sponsor Logo 4", tier: "Silver" },
-    { name: "Sponsor Logo 5", tier: "Silver" },
-    { name: "Sponsor Logo 6", tier: "Bronze" },
+    { name: "SoloTech", tier: "Gold", logo: solotechLogo },
+    { name: "Apple", tier: "Silver", logo: appleLogo },
+    { name: "TheJanksters", tier: "Silver", logo: jankstersLogo },
+    { name: "Shadow Oaks Apartments", tier: "Silver", logo: shadowOaksLogo },
+    { name: "The DEKA Foundation", tier: "Bronze", logo: dekaLogo },
+    { name: "Bosch Community Fund", tier: "Bronze", logo: boschLogo },
+    { name: "The Timken Company", tier: "Bronze", logo: timkenLogo },
+    { name: "Jabil Cares Foundation", tier: "Bronze", logo: jabilLogo },
   ];
 
   return (
@@ -55,14 +64,19 @@ const Sponsors = () => {
             subtitle="The amazing organizations supporting our mission."
           />
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
             {currentSponsors.map((sponsor, index) => (
               <div
                 key={index}
                 className="p-8 bg-background rounded-2xl flex flex-col items-center justify-center aspect-video hover:shadow-lg transition-shadow"
               >
-                <Building className="text-muted-foreground mb-4" size={48} />
-                <span className="text-muted-foreground text-sm">{sponsor.tier} Sponsor</span>
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name} 
+                  className="w-full h-32 object-contain mb-4"
+                />
+                <span className="text-muted-foreground text-sm font-medium text-center">{sponsor.name}</span>
+                <span className="text-gold text-xs mt-1">{sponsor.tier}</span>
               </div>
             ))}
           </div>
@@ -78,7 +92,7 @@ const Sponsors = () => {
             light
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {sponsorTiers.map((tier) => (
               <div
                 key={tier.tier}

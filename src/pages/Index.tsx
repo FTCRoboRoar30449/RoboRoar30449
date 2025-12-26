@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Wrench, Code, Trophy, Users, ArrowRight, Heart, Sparkles } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
-import logo from "@/assets/logo-light.png";
+import teamPhoto from "@/assets/team-photo.png";
 
 const Index = () => {
   const features = [
@@ -29,10 +29,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: "2+", label: "Years Active" },
-    { number: "10+", label: "Competitions" },
-    { number: "15+", label: "Outreach Events" },
-    { number: "100+", label: "Students Impacted" },
+    { number: "2025", label: "Founded Summer" },
+    { number: "2", label: "Robots Built" },
+    { number: "9", label: "Team Members" },
+    { number: "FTC", label: "Competition Active" },
   ];
 
   return (
@@ -76,13 +76,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="hidden lg:flex justify-center animate-fade-up animation-delay-200">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-pink/20 rounded-full blur-3xl scale-110" />
+            <div className="hidden lg:flex justify-center items-center animate-fade-in animation-delay-200">
+              <div className="relative w-full h-full">
                 <img 
-                  src={logo} 
-                  alt="RoboRoar Mascot" 
-                  className="relative w-[400px] h-auto animate-float"
+                  src={teamPhoto} 
+                  alt="RoboRoar Team 30449" 
+                  className="w-full h-auto rounded-2xl shadow-2xl object-cover"
                 />
               </div>
             </div>
@@ -160,12 +159,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Impact Stats */}
+      {/* Team Facts */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto">
           <SectionTitle
-            title="Our Impact"
-            subtitle="Growing stronger every season, inspiring more girls to explore STEM."
+            title="Our Team"
+            subtitle="A new team with big dreams and the determination to make them happen."
           />
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-12">

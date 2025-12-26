@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Youtube, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import logo from "@/assets/logo-light.png";
 
 const Footer = () => {
@@ -47,21 +47,7 @@ const Footer = () => {
             <h4 className="font-display text-2xl text-gold mb-6">Connect With Us</h4>
             <div className="flex gap-4 mb-6">
               <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={20} />
-              </a>
-              <a
-                href="#"
+                href="mailto:roboroar30449@gmail.com"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink transition-colors"
                 aria-label="Email"
               >

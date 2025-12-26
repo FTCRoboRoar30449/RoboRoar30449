@@ -93,7 +93,7 @@ const Vision = () => {
       <section className="py-20 md:py-28 bg-gradient-to-br from-pink/10 to-gold/10">
         <div className="container mx-auto text-center">
           <h2 className="font-display text-4xl md:text-5xl text-primary mb-8">
-            The Future is <span className="text-pink">Female</span>
+            The Future is <span className="text-pink">US</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Every girl who joins RoboRoar leaves with more than robotics skills. 

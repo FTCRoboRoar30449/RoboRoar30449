@@ -8,7 +8,6 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Vision & Values", path: "/vision" },
   { name: "Meet the Team", path: "/team" },
-  { name: "Outreach", path: "/outreach" },
   { name: "Competitions", path: "/competitions" },
   { name: "Sponsors", path: "/sponsors" },
   { name: "Join", path: "/join" },
@@ -25,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="RoboRoar 30449" className="h-14 w-auto" />
+            <img src={logo} alt="RoboRoar 30449" className="h-20 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

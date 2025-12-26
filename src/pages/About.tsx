@@ -48,13 +48,13 @@ const About = () => {
               <div className="space-y-6 text-muted-foreground">
                 <p className="text-lg leading-relaxed">
                   <span className="text-gold font-semibold">RoboRoar 30449</span> is a middle school all-girls 
-                  FIRST Tech Challenge (FTC) robotics team. We are students who are passionate 
+                  FIRST Tech Challenge (FTC) robotics team founded in Summer 2025. We are students who are passionate 
                   about science, technology, engineering, and math — and we're proving that girls 
                   belong in every corner of STEM.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Founded on the belief that young women can and should lead in technology, 
-                  our team provides a supportive environment where girls can explore robotics, 
+                  As a new team, we're building our foundation on the belief that young women can and should 
+                  lead in technology. Our team provides a supportive environment where girls can explore robotics, 
                   develop technical skills, and build lasting confidence.
                 </p>
                 <p className="text-lg leading-relaxed">

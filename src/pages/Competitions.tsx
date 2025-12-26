@@ -1,34 +1,24 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
-import { Trophy, Medal, Star, Calendar } from "lucide-react";
+import { Trophy, Calendar } from "lucide-react";
+import robot2024 from "@/assets/robot-2024.jpg";
 
 const Competitions = () => {
   const seasons = [
     {
-      year: "2024-2025",
-      name: "INTO THE DEEP",
-      events: [
-        { name: "League Meet 1", location: "Local Arena", result: "Qualified" },
-        { name: "League Meet 2", location: "Tech Center", result: "Top 5" },
-        { name: "League Championship", location: "City Convention", result: "Upcoming" },
-      ],
+      year: "2025-2026",
+      name: "DECODE",
+      description: "Our team is competing in the Decode season! We'll be participating at Santa Clara 1 and Folsom 1 competitions.",
+      hasRobotImage: false,
     },
     {
-      year: "2023-2024",
-      name: "CENTERSTAGE",
-      events: [
-        { name: "Qualifier 1", location: "Regional High School", result: "Advanced" },
-        { name: "Qualifier 2", location: "Community College", result: "Alliance Captain" },
-        { name: "State Championship", location: "State Fairgrounds", result: "Competed" },
-      ],
+      year: "2024-2025",
+      name: "INTO THE DEEP",
+      description: "During the summer our team built a competition ready robot to train new members and learn how to build a robot. The robot had a pivoting cascade elevator mechanism with an active intake mechanism.",
+      hasRobotImage: true,
+      robotImage: robot2024,
     },
-  ];
-
-  const awards = [
-    { name: "Connect Award", event: "League Championship 2024", icon: Trophy },
-    { name: "Motivate Award", event: "Qualifier 2023", icon: Medal },
-    { name: "Judges Choice", event: "Regional Event 2023", icon: Star },
   ];
 
   return (
@@ -105,68 +95,44 @@ const Competitions = () => {
         </div>
       </section>
 
-      {/* Season Highlights */}
+      {/* Current Season */}
       <section className="py-20 md:py-28 bg-muted">
         <div className="container mx-auto">
           <SectionTitle
-            title="Season Highlights"
-            subtitle="Our competition history and achievements."
+            title="Our Seasons"
+            subtitle="Following our journey through FTC competitions."
           />
 
-          <div className="space-y-12 mt-12">
+          <div className="max-w-3xl mx-auto mt-12 space-y-8">
             {seasons.map((season) => (
               <div key={season.year} className="bg-background rounded-2xl p-8 shadow-sm">
-                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
+                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
                   <h3 className="font-display text-3xl text-primary">{season.year}</h3>
                   <span className="px-4 py-2 bg-gold/10 text-gold rounded-full text-sm font-medium">
                     {season.name}
                   </span>
                 </div>
                 
-                <div className="grid md:grid-cols-3 gap-6">
-                  {season.events.map((event) => (
-                    <div
-                      key={event.name}
-                      className="p-6 bg-muted rounded-xl"
-                    >
-                      <h4 className="font-display text-xl text-primary mb-2">{event.name}</h4>
-                      <p className="text-muted-foreground text-sm mb-3">{event.location}</p>
-                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                        event.result === "Upcoming" 
-                          ? "bg-gold/20 text-gold" 
-                          : "bg-pink/10 text-pink"
-                      }`}>
-                        {event.result}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Awards */}
-      <section className="py-20 md:py-28 bg-navy text-white">
-        <div className="container mx-auto">
-          <SectionTitle
-            title="Awards & Recognition"
-            subtitle="Celebrating our achievements beyond the playing field."
-            light
-          />
-
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {awards.map((award) => (
-              <div
-                key={award.name}
-                className="p-8 bg-white/5 rounded-2xl border border-white/10 text-center hover:border-gold/50 transition-all duration-300 group"
-              >
-                <div className="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
-                  <award.icon className="text-gold" size={36} />
-                </div>
-                <h3 className="font-display text-2xl mb-2">{award.name}</h3>
-                <p className="text-white/60 text-sm">{award.event}</p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  {season.description}
+                </p>
+                
+                {season.hasRobotImage ? (
+                  <div className="mt-8 rounded-xl overflow-hidden">
+                    <img 
+                      src={season.robotImage} 
+                      alt={`${season.name} Robot`}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="mt-8 p-6 bg-muted rounded-xl text-center">
+                    <Trophy className="text-gold mx-auto mb-4" size={48} />
+                    <p className="text-muted-foreground font-medium">
+                      Robot Picture Coming Soon
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

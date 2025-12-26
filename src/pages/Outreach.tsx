@@ -28,12 +28,6 @@ const Outreach = () => {
     },
   ];
 
-  const impactStats = [
-    { number: "500+", label: "Students Reached" },
-    { number: "15+", label: "Events Hosted" },
-    { number: "10+", label: "School Visits" },
-    { number: "3", label: "Community Partners" },
-  ];
 
   return (
     <Layout>
@@ -90,31 +84,6 @@ const Outreach = () => {
         </div>
       </section>
 
-      {/* Impact Stats */}
-      <section className="py-20 md:py-28 bg-muted">
-        <div className="container mx-auto">
-          <SectionTitle
-            title="Our Community Impact"
-            subtitle="The difference we're making, one interaction at a time."
-          />
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {impactStats.map((stat) => (
-              <div
-                key={stat.label}
-                className="text-center p-8 bg-background rounded-2xl shadow-sm"
-              >
-                <div className="font-display text-5xl md:text-6xl text-gold mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-muted-foreground font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-pink/10 to-gold/10">
