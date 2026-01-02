@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Wrench, Code, Trophy, Users, ArrowRight, Heart, Sparkles } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
-import teamPhoto from "@/assets/team-photo.png";
+import teamPhoto from "@/assets/team-photo.jpg";
 
 const Index = () => {
   const features = [
