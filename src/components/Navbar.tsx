@@ -42,6 +42,14 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <a
+              href="https://hcb.hackclub.com/donations/start/roboroar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-pink ml-2 text-sm px-6 py-2"
+            >
+              Donate
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -72,6 +80,15 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+              <a
+                href="https://hcb.hackclub.com/donations/start/roboroar"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="btn-pink mx-4 mt-2 text-sm px-6 py-3 text-center"
+              >
+                Donate
+              </a>
             </div>
           </div>
         )}

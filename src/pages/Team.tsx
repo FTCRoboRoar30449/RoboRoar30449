@@ -4,7 +4,7 @@ import SectionTitle from "@/components/SectionTitle";
 
 const Team = () => {
   const students = [
-    { name: "Sarah", role: "Team Captain, Programming, Scouting" },
+    { name: "Sarah", role: "Team Captain, Design, Programming, Scouting" },
     { name: "Ruchitha", role: "Design & Build Lead, Pit Lead" },
     { name: "Tanvi", role: "Programming Lead, Events Lead" },
     { name: "Saanvi", role: "Build, Pit Crew, Fundraising, Awards & Documentation" },

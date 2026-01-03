@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import SectionTitle from "@/components/SectionTitle";
@@ -106,10 +105,15 @@ const Sponsors = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link to="/contact" className="btn-pink">
-              Contact Us to Sponsor
+            <a 
+              href="https://hcb.hackclub.com/donations/start/roboroar" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-pink"
+            >
+              Sponsor Us
               <ArrowRight className="ml-2" size={20} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
